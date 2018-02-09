@@ -10,7 +10,7 @@ public class World {
 
 
     boolean flag = true;
-    int choice = 0;
+    int choice;
     printInstruction();
         while (flag){
             System.out.println("Enter code:");
@@ -40,7 +40,7 @@ public class World {
             }
         }
     }
-    public static void printInstruction(){
+    private static void printInstruction(){
         System.out.println("\nPress");
         System.out.println("\t 0 - To print choice options.");
         System.out.println("\t 1 - To print the list of UE members");
@@ -50,24 +50,28 @@ public class World {
         System.out.println("\t 5 - To search for member.");
         System.out.println("\t 6 - To quit meeting.");
     }
-    public static void addNewMember(){
+    private static void addNewMember(){
         System.out.println("Enter new country to the union:");
         String newMember = scanner.nextLine();
         ue.addMember(newMember);
     }
-    public static void modifyMember(){
+    private static void modifyMember(){
         System.out.println("Enter country to remove:");
         String oldMember = scanner.nextLine();
         System.out.println("Enter new country on old place:");
         String newMember = scanner.nextLine();
         ue.modifyMembers(oldMember,newMember);
     }
-    public static void removeMember(){
+    private static void removeMember(){
         System.out.println("Enter country to remove:");
         String oldMember = scanner.nextLine();
         ue.removeMember(oldMember);
     }
-    public static void searchForMember(){
+
+    private static void jack() {
+        System.out.println("Jack says hello");
+    }
+    private static void searchForMember(){
         System.out.println("Enter searched country:");
         String searchedCountry = scanner.nextLine();
         ue.checkMember(searchedCountry);
