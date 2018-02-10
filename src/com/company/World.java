@@ -68,9 +68,7 @@ public class World {
         ue.removeMember(oldMember);
     }
 
-    private static void jack() {
-        System.out.println("Jack says hello");
-    }
+
     private static void searchForMember(){
         System.out.println("Enter searched country:");
         String searchedCountry = scanner.nextLine();
